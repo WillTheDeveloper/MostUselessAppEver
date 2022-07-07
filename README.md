@@ -1,1 +1,1 @@
-# JustAnotherApplication
+# Just Another Application
