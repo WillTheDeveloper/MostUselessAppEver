@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace JustAnotherApplication
 {
@@ -21,6 +22,8 @@ namespace JustAnotherApplication
         {
             press_01.Visible = true;
             press_02.Visible = false;
+            button2.Visible = false;
+            textBox1.Visible = false;
         }
 
         private void press_01_Click(object sender, EventArgs e)
@@ -42,6 +45,33 @@ namespace JustAnotherApplication
             text_01.Text = "HELLO!";
             press_01.Visible = true;
             press_02.Visible = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            text_01.Text = "PRETTY SWAG!";
+        }
+
+        private void save_me_Click(object sender, EventArgs e)
+        {
+            button2.Visible = true;
+            textBox1.Visible = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            button2.Visible = false;
+            textBox1.Visible = false;
+            string name;
+            name = textBox1.Text;
+            File.Create(name + ".txt");
+            Console.WriteLine("Saved " + name + ".txt lol.");
+            textBox1.Text = "";
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
