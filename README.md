@@ -1,4 +1,4 @@
-# Just Another Application
+# Most Useless App Ever
 
 When you open the application, this is what you see:
 
