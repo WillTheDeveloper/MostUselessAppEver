@@ -62,11 +62,19 @@ namespace JustAnotherApplication
         {
             button2.Visible = false;
             textBox1.Visible = false;
-            string name;
-            name = textBox1.Text;
-            File.Create(name + ".txt");
-            Console.WriteLine("Saved " + name + ".txt lol.");
-            textBox1.Text = "";
+            try
+            {
+                string name;
+                name = textBox1.Text;
+                File.Create(name + ".txt");
+                Console.WriteLine("Saved " + name + ".txt lol.");
+                textBox1.Text = "";
+            }
+            catch
+            {
+                
+            }
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
